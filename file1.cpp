@@ -3,20 +3,23 @@
 using namespace std;
 
 // Node class representing a single node in the linked list
-class Node {
+class Node 
+{
 public:
     int data;
-    Node* next;
+    Node *next;
 
-    Node(){
+    Node()
+    {
         next = NULL;
     }
 };
 
 //Stack class
-class Stack {
+class Stack 
+{
 private:
-Node* top; // Pointer to the top node of the stack
+Node *top; // Pointer to the top node of the stack
 
 public:
     Stack()
@@ -27,7 +30,7 @@ public:
 // Push operation Insert an element onto the top of the stack
 int push(int value)
 {
-    Node* newNode = new Node(); // 1. Allocate memory for the new node
+    Node *newNode = new Node(); // 1. Allocate memory for the new node
     newNode->data = value; // 2. Assign Value 
     newNode->next = top; // 3. Set the next pointer of the new node to the current top
     top = newNode; // 4. Update the top pointer to the new node
@@ -43,7 +46,7 @@ void pop()
         cout << "Stack is empty." << endl;
     }
 
-    Node* temp = top; // Create a temporary poiter to the top node
+    Node *temp = top; // Create a temporary poiter to the top node
     top = top->next; // Update the top pointer to the next node
     cout <<"Popped value: " <<top->data << endl;
 }

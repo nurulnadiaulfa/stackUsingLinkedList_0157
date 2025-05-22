@@ -69,7 +69,7 @@ void peek()
 //isEmpty operation : check if the stack is empty
 bool isEmpty()
 {
-    return top == NULL; // Return if the top pointer is NULL, indicating an
+    return top == NULL; // Return if the top pointer is NULL, indicating an empty stack 
 }
 };
 

@@ -72,3 +72,11 @@ bool isEmpty()
     return top == NULL; // Return if the top pointer is NULL, indicating an
 }
 };
+
+int main()
+{
+    stack stack;
+
+     int choice = 0;
+     int value;
+}

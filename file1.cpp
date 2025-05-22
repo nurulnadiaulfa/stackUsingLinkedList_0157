@@ -75,7 +75,7 @@ bool isEmpty()
 
 int main()
 {
-    stack stack;
+    Stack stack;
 
      int choice = 0;
      int value;
@@ -88,5 +88,14 @@ int main()
         cout << "4. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter the value to push: ";
+            cin >> value;
+            stack.push(value); //Push the entered onto the stack
+            break;
+        }
      }
 }

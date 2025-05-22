@@ -19,12 +19,14 @@ private:
 Node* top; // Pointer to the top node of the stack
 
 public:
-    Stack(){
+    Stack()
+    {
         top = NULL; //Initialize the stack with a null top pointer
     }
 
 // Push operation Insert an element onto the top of the stack
-int push(int value){
+int push(int value)
+{
     Node* newNode = new Node(); // 1. Allocate memory for the new node
     newNode->data = value; // 2. Assign Value 
     newNode->next = top; // 3. Set the next pointer of the new node to the current top
@@ -34,13 +36,33 @@ int push(int value){
 }
 
 // Pop operation : Remove the topmost element from the stack
-void pop(){
-    if (isEmpty()) {
+void pop()
+{
+    if (isEmpty()) 
+    {
         cout << "Stack is empty." << endl;
     }
 
     Node* temp = top; // Create a temporary poiter to the top node
     top = top->next; // Update the top pointer to the next node
     cout <<"Popped value: " <<top->data << endl;
+}
+//Peek/Top Operation : Retriieve the value of the top most element without removing
+void peek()
+{
+    if (top == NULL)
+    {
+        cout << "List is Empty." << endl;
+    }
+    else
+    {
+        Node *current = top;
+        while (current != NULL)
+        {
+            cout << current->data << " " << endl;
+            current = current->next;
+        }
+        cout << endl;
+    } //Return the value of the top node
 }
 }
